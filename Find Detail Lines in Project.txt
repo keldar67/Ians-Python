@@ -1,0 +1,7 @@
+﻿detlines = FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_Lines)
+for dl in detlines:
+  if dl.get_Parameter(BuiltInParameter.CURVE_IS_DETAIL):
+    #print dl.Paramaters("Workset")
+    
+    for p in dl.Parameters:
+      print p.AsValueString()
